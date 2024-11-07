@@ -1,0 +1,19 @@
+modules:
+  jira:issuePanel:
+    - key: implementation-progress-issue-panel
+      resource: main
+      render: native
+      title: Implementation Progress
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+resources:
+  - key: main
+    path: src/index.jsx
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/a4dcb3c5-bd64-49e2-939d-b9143aca0086
+permissions:
+  scopes:
+    - read:jira-work
+    - read:issue:jira
+    - read:issue-details:jira
